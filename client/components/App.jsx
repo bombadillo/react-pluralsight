@@ -9,16 +9,9 @@ export default class App extends React.Component {
     render() {
         return (
             <div className="container">
-                <div className="columns">
-                    <div className="column col-3 ">
-
-                        <h3>App started...</h3>
-
-                    </div>
-                </div>
-
+                
                 <Buttons />
-                                                                       
+
             </div>
         )
     }
