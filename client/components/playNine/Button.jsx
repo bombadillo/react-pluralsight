@@ -20,7 +20,7 @@ export default (props) => {
 
         default:
             button =                 
-                <label className="label label-primary" disabled={props.selectedNumbers.length === 0 }
+                <label className={'label label-' + (props.selectedNumbers.length === 0 ? 'default' : 'primary') }
                     onClick={props.checkAnswer}>
                     <i className="icon icon-menu"></i>
                 </label>

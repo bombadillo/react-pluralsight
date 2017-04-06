@@ -63,6 +63,8 @@ export default class PlayNine extends React.Component {
     }
 
     checkAnswer = () => {
+        if (this.state.selectedNumbers.length === 0) { return; }
+
         this.setState(prevState => ({
             answerIsCorrect: prevState.numberOfStars ===
                 prevState.selectedNumbers.reduce((acc, n) => acc + n, 0)
