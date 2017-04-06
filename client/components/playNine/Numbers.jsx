@@ -19,16 +19,15 @@ export default (props) => {
     }
 
     return (
-        <div className="column col-7 card text-center">
-            <div>
-                {arrayOfNumbers.map((number, i) => 
-                    <span key={i} 
-                        className={`label label-${numberClassName(number)} ${styles.number}`}
-                        onClick={() => props.selectNumber(number)}>
-                        {number}
-                    </span>
-                )}
-            </div>
+        <div className="column col-7 card text-center centered">        
+            <h4>Available numbers</h4>
+            {arrayOfNumbers.map((number, i) => 
+                <span key={i} 
+                    className={`label label-${numberClassName(number)} ${styles.number}`}
+                    onClick={() => props.selectNumber(number)}>
+                    {number}
+                </span>
+            )}
         </div>
     )
 }

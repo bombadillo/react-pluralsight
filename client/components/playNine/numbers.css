@@ -2,5 +2,5 @@
     display: inline-block;
     margin: 0.5em;
     text-align: center;
-    width: 24px;
+    min-width: 24px;
 }

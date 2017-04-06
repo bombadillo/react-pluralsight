@@ -28,7 +28,7 @@ export default (props) => {
     }
 
     return (
-        <div className="column col-1">
+        <div className="column col-2">
             {button}
 
             <br /> <br />

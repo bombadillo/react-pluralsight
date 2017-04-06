@@ -123,34 +123,37 @@ export default class PlayNine extends React.Component {
         } = this.state;
 
         return (
-            <div>
-                <h3>Play Nine</h3>
-                <h5>Time remaining: {timeLeft}</h5>
+            <div className="empty">
                 <div className="columns">
-                    <Stars numberOfStars={numberOfStars} /> 
-                    <Button selectedNumbers={selectedNumbers} 
-                        checkAnswer={this.checkAnswer} 
-                        answerIsCorrect={answerIsCorrect} 
-                        acceptAnswer={this.acceptAnswer} 
-                        redraw={this.redraw} 
-                        redraws={redraws} />      
-                    <Answer selectedNumbers={selectedNumbers} 
-                        unselectNumber={this.unselectNumber} />      
-                </div>
+                    <div className="column col-7 centered">                
+                        <h3>Play Nine</h3>
+                        <h5>Time remaining: {timeLeft}</h5>
+                        <div className="columns">
+                            <Stars numberOfStars={numberOfStars} /> 
+                            <Button selectedNumbers={selectedNumbers} 
+                                checkAnswer={this.checkAnswer} 
+                                answerIsCorrect={answerIsCorrect} 
+                                acceptAnswer={this.acceptAnswer} 
+                                redraw={this.redraw} 
+                                redraws={redraws} />      
+                            <Answer selectedNumbers={selectedNumbers} 
+                                unselectNumber={this.unselectNumber} />      
+                        </div>
 
-                <div className="columns">
-                    <Numbers selectedNumbers={selectedNumbers}
-                        selectNumber={this.selectNumber} 
-                        usedNumbers={usedNumbers} />
-                </div>
+                        <div className="columns">
+                            <Numbers selectedNumbers={selectedNumbers}
+                                selectNumber={this.selectNumber} 
+                                usedNumbers={usedNumbers} />
+                        </div>
 
-                {doneStatus &&
-                    <div className="columns">
-                        <DoneFrame doneStatus={doneStatus}
-                            resetGame={this.resetGame} />
-                    </div>                
-                }
-                
+                        {doneStatus &&
+                            <div className="columns">
+                                <DoneFrame doneStatus={doneStatus}
+                                    resetGame={this.resetGame} />
+                            </div>                
+                        }
+                    </div>
+                </div>
             </div>
         )
     }

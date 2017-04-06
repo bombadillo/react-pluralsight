@@ -19,23 +19,23 @@ export default class Buttons extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="empty">
                 <h3>Buttons</h3>
                 <div className="columns">                    
-                    <div className="column col-3 ">
+                    <div className="column col-3 centered">
                         <FunctionButton />
                     </div>
                 </div>
 
                 <div className="columns">
-                    <div className="column col-3 ">
+                    <div className="column col-3 centered">
                         <ComponentButton />  
                     </div>
                 </div>   
 
 
                 <div className="columns">
-                    <div className="column col-3 ">
+                    <div className="column col-3 centered">
                         <b>Component buttons with external result component</b>
                         <div className="text-break"></div>
                         <ComponentButtonExternalResult amountToIncrement={50} onClickFunction={this.incrementCounter} /> 

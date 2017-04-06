@@ -17,16 +17,16 @@ export default class GithubSearcher extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="empty">
                 <h3>Github Searcher</h3>
                 <div className="columns">
-                    <div className="column col-3">
+                    <div className="column col-3 centered">
                         <Form onSubmit={this.addNewCard}/>
                     </div>
                 </div>
 
                 <div className="columns">                
-                    <div className="column col-3">                    
+                    <div className="column col-3 centered">                    
                         <Cards cards={this.state.cards}/>
                     </div>
                 </div>
