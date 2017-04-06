@@ -3,4 +3,6 @@
     margin: 0.5em;
     text-align: center;
     min-width: 24px;
+    cursor: pointer;
+    user-select: none;
 }
