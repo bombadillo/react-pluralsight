@@ -1,5 +1,7 @@
 import React from 'react';
 
+import styles from './buttons.css';
+
 export default class ComponentButtonExternalResult extends React.Component {
 
     incrementCounter = () => {
@@ -8,7 +10,7 @@ export default class ComponentButtonExternalResult extends React.Component {
 
     render() {
         return (
-            <button className="btn" onClick={this.incrementCounter}>
+            <button className={`btn ${styles.btn}`} onClick={this.incrementCounter}>
                 +{this.props.amountToIncrement}
             </button>
         )
