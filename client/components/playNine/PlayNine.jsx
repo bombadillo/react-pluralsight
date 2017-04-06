@@ -124,7 +124,7 @@ export default class PlayNine extends React.Component {
                 {doneStatus &&
                     <div className="columns">
                         <DoneFrame doneStatus={doneStatus}
-                            resetGame={resetGame} />
+                            resetGame={this.resetGame} />
                     </div>                
                 }
                 
