@@ -9,6 +9,26 @@ import possibleCombinations from './possibleCombinations.js';
 
 export default class PlayNine extends React.Component {
  
+    constructor(props) {
+        super(props);
+        this.startTimer();
+    }
+
+    startTimer = () => {
+        setInterval(() => {
+
+            if (this.state.timeLeft <= 0) {
+                this.setState({
+                    doneStatus: 'Game Over! You ran out of time!'
+                });                
+            } else {
+                this.setState(prevState => ({
+                    timeLeft: prevState.timeLeft - 1
+                }));                
+            }
+        }, 1000);
+    }
+
     getRandomStars = () => {
         return 1 + Math.floor(Math.random()*9);
     }
@@ -19,7 +39,8 @@ export default class PlayNine extends React.Component {
         answerIsCorrect: null,
         usedNumbers: [],
         redraws: 5,
-        doneStatus: null
+        doneStatus: null,
+        timeLeft: 60
     });
 
     state = this.initialState();
@@ -97,12 +118,14 @@ export default class PlayNine extends React.Component {
             answerIsCorrect,
             usedNumbers,
             redraws,
-            doneStatus
+            doneStatus,
+            timeLeft
         } = this.state;
 
         return (
             <div>
                 <h3>Play Nine</h3>
+                <h5>Time remaining: {timeLeft}</h5>
                 <div className="columns">
                     <Stars numberOfStars={numberOfStars} /> 
                     <Button selectedNumbers={selectedNumbers} 
