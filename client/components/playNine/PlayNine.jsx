@@ -130,14 +130,17 @@ export default class PlayNine extends React.Component {
                     <div className="column col-7 centered">                
                         <h3>Play Nine</h3>
                         <h5>Time remaining: {timeLeft}</h5>
+
                         <div className="columns">
                             <Stars numberOfStars={numberOfStars} /> 
+
                             <Button selectedNumbers={selectedNumbers} 
                                 checkAnswer={this.checkAnswer} 
                                 answerIsCorrect={answerIsCorrect} 
                                 acceptAnswer={this.acceptAnswer} 
                                 redraw={this.redraw} 
                                 redraws={redraws} />      
+                                
                             <Answer selectedNumbers={selectedNumbers} 
                                 unselectNumber={this.unselectNumber} />      
                         </div>
