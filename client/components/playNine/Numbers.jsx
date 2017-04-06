@@ -6,11 +6,16 @@ import styles from './numbers.css';
 export default (props) => {
     const arrayOfNumbers = _.range(1, 10);
     const numberClassName = (number) => {
+
+        if (props.usedNumbers.indexOf(number) >= 0) {
+            return 'warning';
+        }
+
         if (props.selectedNumbers.indexOf(number) >= 0) {
             return 'danger';
-        } else {
-            return 'primary';
-        }
+        } 
+
+        return 'primary';
     }
 
     return (

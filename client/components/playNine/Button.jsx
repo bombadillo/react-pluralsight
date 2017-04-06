@@ -1,9 +1,43 @@
 import React from 'react';
 
 export default (props) => {
+    let button;
+
+    switch(props.answerIsCorrect) {
+        case true:
+            button = 
+                <label className="label label-success" onClick={props.acceptAnswer}>
+                    <i className="icon icon-check"></i>
+                </label>               
+            break;
+        
+        case false:
+            button = 
+                <label className="label label-danger">
+                    <i className="icon icon-cross"></i>
+                </label>
+            break;
+
+        default:
+            button =                 
+                <label className="label label-primary" disabled={props.selectedNumbers.length === 0 }
+                    onClick={props.checkAnswer}>
+                    <i className="icon icon-menu"></i>
+                </label>
+            break;
+    }
+
     return (
         <div className="column col-1">
-            <button className="btn" disabled={props.selectedNumbers.length === 0 }>=</button>
+            {button}
+
+            <br /> <br />
+
+            <label className="label label-warning" onClick={props.redraw}>
+                <i className="icon icon-refresh">                    
+                </i>
+                {props.redraws}
+            </label>
         </div>
     )
 }
