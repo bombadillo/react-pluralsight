@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Stars from './Stars.jsx';
-import Button from './Button.jsx';
-import Answer from './Answer.jsx';
-import Numbers from './Numbers.jsx';
-import DoneFrame from './DoneFrame.jsx';
-import possibleCombinations from './possibleCombinations.js';
+import Stars from './components/Stars.jsx';
+import Button from './components/Button.jsx';
+import Answer from './components/Answer.jsx';
+import Numbers from './components/Numbers.jsx';
+import DoneFrame from './components/DoneFrame.jsx';
+import possibleCombinations from './services/possibleCombinations.js';
 
 export default class PlayNine extends React.Component {
  
